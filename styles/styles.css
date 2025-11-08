@@ -13,14 +13,52 @@ h1 {
   color: darkblue;
 }
 
+/* General image styles - specific widths are set later */
 img {
-  width: 150px;
-  height: auto;
-  border: 1px solid black;
+  /* Removed 'width: 150px;' as it's better defined in main img/aside img */
+  height: auto; 
+  border: 1px solid black; 
   padding: 2px;
   box-shadow: 0 0 30px gray;
 }
 
+/* --- REQUIRED STYLES BELOW THIS LINE --- */
+
+main {
+  max-width: 840px; /* REQUIRED */
+}
+
+/* REQUIRED aside selector styles */
+aside {
+  width: 20rem;
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.2); 
+  padding: 1rem;
+  background-color: #eee;
+  color: #333;
+  text-align: center;
+}
+
+/* REQUIRED aside img styles */
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+/* REQUIRED main img (profile image) styles */
+main img {
+  width: 150px;
+  height: auto;
+}
+
+/* REQUIRED p selector modification */
 p {
-  padding: 10px;
+  padding: 0;
+}
+
+/* REQUIRED footer styles */
+footer {
+  margin-top: 15px;
+  border-top: 1px solid #000;
+  text-align: center;
 }
