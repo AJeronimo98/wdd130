@@ -1,16 +1,20 @@
 :root {
+  /* Colors */
   --primary-color: darkblue;
   --light-color: white;
   --secondary-text-color: #333;
   --aside-bg-color: #eee;
   --border-color: black;
   
+  /* Spacing */
   --spacing-unit: 1rem;
   --padding-nav: 10px;
   --spacing-footer-margin: 15px;
   
+  /* Layout */
   --max-width-main: 840px;
   
+  /* Borders & Shadows */
   --shadow-standard: 0 0 30px gray;
   --border-subtle: 1px solid rgb(0 0 0 / 0.2);
 }
