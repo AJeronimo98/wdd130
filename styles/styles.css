@@ -1,6 +1,4 @@
-
 :root {
-
   --primary-color: darkblue;
   --light-color: white;
   --secondary-text-color: #333;
@@ -9,9 +7,10 @@
   --spacing-unit: 1rem;
   --padding-nav: 10px;
   --spacing-footer-margin: 15px;
-  --max-width-page: 960px; 
+  --max-width-page: 840px; 
   --shadow-standard: 0 0 30px gray;
   --border-subtle: 1px solid var(--box-border-color);
+  --border-color: #ccc; 
 }
 
 * {
@@ -23,70 +22,88 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+/* Regla combinada para centrar el contenido y limitar el ancho */
+header, .grid, footer {
+    max-width: var(--max-width-page); 
+    margin: 0 auto; 
+    padding: 0 10px; 
 }
 
 header {
     background-color: var(--primary-color);
     color: var(--light-color);
-    padding: var(--spacing-unit);
+    padding-top: var(--spacing-unit); 
+    padding-bottom: var(--spacing-unit);
     text-align: center;
 }
 
+/* Flexbox para navegación: horizontal y espaciado uniforme */
 nav {
     background-color: var(--primary-color);
-    padding: var(--padding-nav);
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0.5rem 0;
+    justify-content: space-evenly; 
+    align-items: center; 
+    padding: 0; 
 }
 
+/* Enlaces de navegación como bloques con padding */
 nav a {
     color: var(--light-color);
     text-decoration: none;
-    padding: 20px;
+    padding: 15px 20px; 
     display: block;
+    transition: background-color 0.3s;
 }
 
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Borde inferior para h1 */
 h1 {
   color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color); 
+  padding-bottom: 5px; 
+  margin-bottom: 1rem;
 }
 
-
-.layout-container {
-    max-width: var(--max-width-page);
+/* Implementación de CSS Grid */
+.grid {
     margin: 20px auto;
     padding: 0 20px;
-    display: flex; 
+    
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
     gap: 20px;
 }
 
 main {
-    flex: 3; 
-    max-width: none; 
+    grid-column: 2 / 3; /* Columna derecha */
 }
 
-.box {
-    margin: var(--spacing-unit); 
+aside {
+    grid-column: 1 / 2; /* Columna izquierda */
+    grid-row: 1 / 2; 
+    
+    text-align: center;
     border: var(--border-subtle);
     padding: var(--spacing-unit); 
     background-color: var(--box-bg-color); 
     color: var(--secondary-text-color); 
     border-radius: 6px; 
+    position: relative; /* Necesario si se mantiene el efecto de superposición del h2 */
 }
 
-aside {
-    position: relative; 
-    flex: 1; 
-    text-align: center;
-}
-
-
+/* Estilos de aside para el efecto de título superpuesto (opcional) */
 aside h2 {
     position: absolute; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
+    
     color: var(--light-color); 
     background-color: rgba(0, 0, 0, 0.6); 
     padding: 5px 10px;
@@ -100,6 +117,17 @@ aside img {
     height: auto;
     border-radius: 8px;
 }
+
+/* Estilo para la lista si usa la clase .box */
+.box {
+    margin: var(--spacing-unit); 
+    border: var(--border-subtle);
+    padding: var(--spacing-unit); 
+    background-color: var(--box-bg-color); 
+    color: var(--secondary-text-color); 
+    border-radius: 6px; 
+}
+
 
 main img {
     float: right; 
