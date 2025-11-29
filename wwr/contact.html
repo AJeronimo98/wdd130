@@ -1,0 +1,72 @@
+<main class="contact-grid">
+
+    <section id="company-info">
+        <h1>Contact Us</h1>
+        <h2>Company Information</h2>
+        <p><strong>Address:</strong> 456 River Run Road, Rapids City, UT 84000</p>
+        <p><strong>Phone:</strong> (801) 555-RAFT (7238)</p>
+        <p><strong>Email:</strong> <a href="mailto:reservations@wwr.com">reservations@wwr.com</a></p>
+    </section>
+
+    <section id="map-location">
+        <h2>Find Us</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15444.60012548232!2d-111.90159425!3d40.7607797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752fe6382103323%3A0x7c73b063d917f694!2sSalt%20Lake%20City%2C%20UT%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1678229712000!5m2!1ses-419!2smx"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="thanks.html" method="get">
+
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="useremail">Email Address:</label>
+            <input type="email" id="useremail" name="useremail" required>
+
+            <fieldset>
+                <legend>Purpose of the Message:</legend>
+                <div>
+                    <input type="radio" id="inquiry" name="purpose" value="general_inquiry" required>
+                    <label for="inquiry">General Inquiry</label>
+                </div>
+                <div>
+                    <input type="radio" id="reservation" name="purpose" value="reservation_question">
+                    <label for="reservation">Reservation Question</label>
+                </div>
+                <div>
+                    <input type="radio" id="suggestion" name="purpose" value="website_suggestion">
+                    <label for="suggestion">Website Suggestion</label>
+                </div>
+            </fieldset>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="employee-profiles">
+        <h2>Our Team</h2>
+        <div class="profile-card">
+            <img src="images/employee1.jpg" alt="Employee Photo - Alex Johnson">
+            <figcaption>Alex Johnson - Chief Operations Officer</figcaption>
+        </div>
+        <div class="profile-card">
+            <img src="images/employee2.jpg" alt="Employee Photo - Maria Rodriguez">
+            <figcaption>Maria Rodriguez - Lead River Guide</figcaption>
+        </div>
+        <div class="profile-card">
+            <img src="images/employee3.jpg" alt="Employee Photo - Ethan Smith">
+            <figcaption>Ethan Smith - Customer Relations Manager</figcaption>
+        </div>
+    </section>
+
+</main>
